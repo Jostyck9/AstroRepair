@@ -2,6 +2,7 @@ fileFormatVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: deec9e36b6b9eee4084acfdf6d06a207
 =======
 <<<<<<< HEAD
@@ -16,6 +17,9 @@ guid: 3010890689bd6e94784ea464aa6a93cc
 =======
 guid: 4216080a608bad745ae0d4635ad6ee6f
 >>>>>>> a
+=======
+guid: 45acad0a4ee8aa14087260f51a5ae283
+>>>>>>> basics of the main menu
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
