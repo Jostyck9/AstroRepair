@@ -22,11 +22,8 @@ public class Leaderboard : MonoBehaviour
         {
             interm.Add(player);
         }
-/*        this.interm.ForEach(player => { Debug.Log("info: " + player.name); });*/
         this.sorted = interm.OrderByDescending(player => player.pieces).ThenBy(player => player.time).ToList<Player>();
-        /*.ThenBy(player => player.time)*/
         this.sorted.ForEach(player => { Debug.Log("info: " + player.name); });
-        /*        sorted = interm.OrderBy(player => player.pieces);*/
     }
     // Update is called once per frame
     void Update()
