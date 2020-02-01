@@ -5,16 +5,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
+
 public class Leaderboard : MonoBehaviour
 {
-    public Text myText;
-    string path, jsonString;
+    public Text textNames;
+    public Text textTimes;
+    public Text textPieces;
+
     List<Player> interm = new List<Player>();
     List<Player> sorted;
-    string display;
-    List<string> names;
-    List<string> time;
-    List<string> pieces;
+
+    string path, jsonString;
+    string names = "";
+    string times = "";
+    string pieces = "";
 
     void Start()
     {
@@ -26,13 +30,17 @@ public class Leaderboard : MonoBehaviour
         {
             interm.Add(player);
         }
-        this.sorted = interm.OrderByDescending(player => player.pieces).ThenBy(player => player.time).ToList<Player>();
+        sorted = interm.OrderByDescending(player => player.pieces).ThenBy(player => player.time).ToList();
         int count = 0;
-        display += "Name\t\tTime\t\tShip Pieces\n";
-        this.sorted.ForEach(player => {
+        names += "Name\n";
+        times += "Time\n";
+        pieces += "Ship Parts\n";
+        sorted.ForEach(player => {
             if (count <= 4)
             {
-                display += player.name + "\t\t" + player.time + "\t\t" + player.pieces + "\n";
+                names += (player.name + "\n");
+                times += (player.time + "\n");
+                pieces += (player.pieces + "\n");
             }
             count++;
         });
@@ -40,7 +48,9 @@ public class Leaderboard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myText.text = display;
+        textNames.text = names;
+        textTimes.text = times;
+        textPieces.text = pieces;
     }
 }
 
