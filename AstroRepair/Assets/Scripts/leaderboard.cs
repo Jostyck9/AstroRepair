@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
 public class Leaderboard : MonoBehaviour
 {
+    public Text myText;
     string path, jsonString;
+    List<Player> interm = new List<Player>();
+    List<Player> sorted;
 
     void Start()
     {
@@ -16,13 +20,17 @@ public class Leaderboard : MonoBehaviour
         Players myList = JsonUtility.FromJson<Players>(jsonString);
         foreach (Player player in myList.players)
         {
-            Debug.Log("name: " + player.name + " time: " + player.time + " pieces: " + player.pieces);
+            interm.Add(player);
         }
+/*        this.interm.ForEach(player => { Debug.Log("info: " + player.name); });*/
+        this.sorted = interm.OrderByDescending(player => player.pieces).ThenBy(player => player.time).ToList<Player>();
+        /*.ThenBy(player => player.time)*/
+        this.sorted.ForEach(player => { Debug.Log("info: " + player.name); });
+        /*        sorted = interm.OrderBy(player => player.pieces);*/
     }
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
 
