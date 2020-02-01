@@ -7,6 +7,8 @@ public class FloorGeneration : MonoBehaviour
 {
     public TileBase sol1;
     public TileBase sol2;
+    public TileBase bush1;
+    public TileBase bush2;
     public int maxX;
     public int maxY;
     // Start is called before the first frame update
@@ -16,11 +18,16 @@ public class FloorGeneration : MonoBehaviour
         {
             for (int j = 0; j < maxY; j++)
             {
-                int s = Random.Range(0, 2);
-               if (s == 1)
+                int s = Random.Range(0, 10);
+                if (s == 1)
+                    this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, j, 0), bush1);
+                else if (s == 2)
+                    this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, j, 0), bush2);
+                else if (s > 2 && s <= 6)
                     this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, j, 0), sol1);
                 else
                     this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, j, 0), sol2);
+
             }
         }
         this.GetComponent<Tilemap>().RefreshAllTiles();
