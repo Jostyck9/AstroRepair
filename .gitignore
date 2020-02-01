@@ -9,7 +9,9 @@ AstroRepair/[Bb]uild/
 AstroRepair/[Bb]uilds/
 AstroRepair/[Ll]ogs/
 AstroRepair/[Mm]emoryCaptures/
+
 AstroRepair/Assets/Scripts/*.meta
+AstroRepair/Assets/Scripts/*.cs.meta
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !AstroRepair/[Aa]ssets/**/*.meta
@@ -48,6 +50,7 @@ AstroRepair/ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+*.cs.meta
 
 # Unity3D generated file on crash reports
 AstroRepair/sysinfo.txt

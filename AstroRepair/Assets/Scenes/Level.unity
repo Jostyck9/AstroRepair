@@ -541,6 +541,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1348063772, guid: c21663542a6cf5a40a79d58c47e7bcb6, type: 3}
+      propertyPath: maxAir
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332891420109605478, guid: c21663542a6cf5a40a79d58c47e7bcb6,
+        type: 3}
+      propertyPath: isDead
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2332891420109605479, guid: c21663542a6cf5a40a79d58c47e7bcb6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -600,11 +609,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2332891420149151836, guid: c21663542a6cf5a40a79d58c47e7bcb6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -60.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21663542a6cf5a40a79d58c47e7bcb6, type: 3}

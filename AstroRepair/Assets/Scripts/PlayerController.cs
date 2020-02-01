@@ -25,14 +25,17 @@ public class PlayerController : MonoBehaviour
     public GameObject right_upSpawner;
     public GameObject right_downSpawner;
 
-    public facing facingDirection;
+    private facing facingDirection;
     private facing lastFacingDirection;
 
     public float speed;
     public float coefSprint;
     public Rigidbody2D rb;
 
-    private bool isRunning = false;
+    public bool isDead = false;
+    public bool hasShoot = false;
+    public bool isRunning = false;
+
     private List<GameObject> spawnersList = new List<GameObject>();
 
     public float intervalShoot = 2.0f;
@@ -70,10 +73,16 @@ public class PlayerController : MonoBehaviour
         else
             isRunning = false;
 
-        updateFacing(moveHorizontal, moveVertical);
-        updateWeapons();
-        checkShoot();
+        UpdateFacing(moveHorizontal, moveVertical);
+        UpdateWeapons();
+        CheckShoot();
+        Move(moveHorizontal, moveVertical);
+    }
 
+    private void Move(float moveHorizontal, float moveVertical)
+    {
+        if (isDead)
+            return;
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         if (isRunning)
             rb.velocity = (movement * (speed * coefSprint) * Time.deltaTime);
@@ -81,24 +90,31 @@ public class PlayerController : MonoBehaviour
             rb.velocity = (movement * speed * Time.deltaTime);
     }
 
-    private void checkShoot()
+    private void CheckShoot()
     {
+        if (isDead)
+            return;
         timeRemainingShoot -= Time.deltaTime;
         if (timeRemainingShoot <= 0 && Input.GetAxis("Fire1") > 0)
         {
-            shoot();
+            Shoot();
             timeRemainingShoot = intervalShoot;
         }
     }
 
-    private void shoot()
+    private void Shoot()
     {
+        if (isDead)
+            return;
         currentWeapon.GetComponent<Shooter>().shoot();
+        hasShoot = true;
     }
     
 
-    private void updateFacing(float moveHorizontal, float moveVertical)
+    private void UpdateFacing(float moveHorizontal, float moveVertical)
     {
+        if (isDead)
+            return;
         if (moveHorizontal > 0 && moveVertical == 0)
             facingDirection = facing.right;
         else if (moveHorizontal < 0 && moveVertical == 0)
@@ -117,12 +133,20 @@ public class PlayerController : MonoBehaviour
             facingDirection = facing.right_up;
     }
 
-    private void updateWeapons()
+    private void UpdateWeapons()
     {
+        if (isDead)
+            return;
         if (lastFacingDirection != facingDirection)
         {
             currentWeapon = spawnersList[(int)facingDirection];
             lastFacingDirection = facingDirection;
         }
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        rb.velocity = new Vector3(0, 0, 0);
     }
 }

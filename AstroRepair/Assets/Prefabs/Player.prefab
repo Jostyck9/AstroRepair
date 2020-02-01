@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2332891420109605478}
   - component: {fileID: 2332891420109605477}
   - component: {fileID: 2332891420109605476}
+  - component: {fileID: 1348063772}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -139,6 +140,9 @@ MonoBehaviour:
   speed: 120
   coefSprint: 2
   rb: {fileID: 2332891420109605480}
+  isRunning: 0
+  hasShoot: 0
+  intervalShoot: 2
 --- !u!61 &2332891420109605477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,6 +181,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab52b5ffed3c4547934c6cfe6a2cabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1348063772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332891420109605482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c22169380565ac4ca8a06818ef7a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAir: 200
+  currentAir: 0
+  airPerSeconds: 0.5
+  airPerSecondsRun: 1.5
+  airShoot: 20
+  playerController: {fileID: 2332891420109605478}
 --- !u!1 &2332891420149151839
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2332891420149151839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.046511624, y: -0.023255812, z: -46.511627}
+  m_LocalPosition: {x: -0.046511624, y: -0.023255812, z: -60.05}
   m_LocalScale: {x: 4.6511626, y: 4.6511626, z: 4.6511626}
   m_Children: []
   m_Father: {fileID: 2332891420109605479}
