@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d862d03fe550ece40951999089709111
+=======
+guid: a076de6481ddb4145a5f54867c70df56
+>>>>>>> add a json file for the leaderboard
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
