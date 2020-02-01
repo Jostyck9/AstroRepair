@@ -1,7 +1,6 @@
 fileFormatVersion: 2
 guid: 7083fa5dc95b24f4d8aeb5a3571775ba
 TextureImporter:
-<<<<<<< HEAD
   internalIDToNameTable:
   - first:
       213: 8848993070067138329
@@ -207,9 +206,6 @@ TextureImporter:
   - first:
       213: -625816518649821151
     second: bullets_67
-=======
-  internalIDToNameTable: []
->>>>>>> Add .meta
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -244,15 +240,11 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> Add .meta
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -275,20 +267,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1726,15 +1717,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-=======
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
->>>>>>> Add .meta
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: e25a9d2829fbb334ca6dbd5f5d256637
     internalID: 0
     vertices: []
     indices: 
