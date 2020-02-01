@@ -35,6 +35,7 @@ public class MapGeneration : MonoBehaviour
             else if (r == 5)
                 this.GetComponent<Tilemap>().SetTile(new Vector3Int(x, y, 0), Roche4);
         }
+        
         this.GetComponent<Tilemap>().RefreshAllTiles();
         
     }
