@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 31756834}
   - component: {fileID: 31756833}
   - component: {fileID: 31756832}
+  - component: {fileID: 31756835}
   m_Layer: 5
   m_Name: Button Leaderboard
 >>>>>>> file modify for menyu
@@ -512,7 +513,18 @@ Transform:
   m_TargetGraphic: {fileID: 31756833}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 31756835}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leaderboard
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &31756833
 MonoBehaviour:
 >>>>>>> file modify for menyu
@@ -797,6 +809,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31756830}
   m_CullTransparentMesh: 0
+--- !u!114 &31756835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31756830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc057742fd7981d42a7bd7f4abcb3e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &102572538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,6 +2233,7 @@ GameObject:
   - component: {fileID: 2015918445}
   - component: {fileID: 2015918444}
   - component: {fileID: 2015918443}
+  - component: {fileID: 2015918446}
   m_Layer: 5
   m_Name: Button Exit
   m_TagString: Untagged
@@ -2343,7 +2368,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2015918444}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2015918446}
+        m_MethodName: exitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2015918444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,6 +2416,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015918441}
   m_CullTransparentMesh: 0
+--- !u!114 &2015918446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015918441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc057742fd7981d42a7bd7f4abcb3e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2066519434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2517,7 @@ GameObject:
   - component: {fileID: 2082004774}
   - component: {fileID: 2082004773}
   - component: {fileID: 2082004772}
+  - component: {fileID: 2082004775}
   m_Layer: 5
   m_Name: Button New Game
   m_TagString: Untagged
@@ -2661,4 +2710,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082004770}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 >>>>>>> file modify for menyu
+=======
+--- !u!114 &2082004775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082004770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc057742fd7981d42a7bd7f4abcb3e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> start add script to modify a text

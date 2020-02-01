@@ -12,6 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
 >>>>>>> basics of the main menu
     guid: 2cda990e2423bbf4892e6590ba056729
+<<<<<<< HEAD
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: cdf5f2f1a69ea1a4585e71b4a0e76f21,
       type: 2}
+=======
+  - enabled: 1
+    path: Assets/Scenes/Leaderboard.unity
+    guid: 723d22772605d60439b6491962f4d2bb
+  m_configObjects: {}
+>>>>>>> start add script to modify a text
