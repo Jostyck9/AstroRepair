@@ -136,12 +136,12 @@ MonoBehaviour:
   left_downSpawner: {fileID: 1830482411965630101}
   right_upSpawner: {fileID: 2190803315931290389}
   right_downSpawner: {fileID: 5123114396132504105}
-  facingDirection: 0
   speed: 120
   coefSprint: 2
   rb: {fileID: 2332891420109605480}
-  isRunning: 0
+  isDead: 0
   hasShoot: 0
+  isRunning: 0
   intervalShoot: 2
 --- !u!61 &2332891420109605477
 BoxCollider2D:
@@ -190,14 +190,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2332891420109605482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c22169380565ac4ca8a06818ef7a7cb, type: 3}
+  m_Script: {fileID: 11500000, guid: d5ccca09af30dba4e8f1dfeda75dc2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAir: 200
-  currentAir: 0
-  airPerSeconds: 0.5
-  airPerSecondsRun: 1.5
-  airShoot: 20
+  maxAir: 100
+  currentAir: 100
+  airPerSeconds: 1
+  airPerSecondsRun: 3
+  airShoot: 10
   playerController: {fileID: 2332891420109605478}
 --- !u!1 &2332891420149151839
 GameObject:
