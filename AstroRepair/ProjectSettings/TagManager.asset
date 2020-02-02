@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Decor
+  - Jawa
   layers:
   - Default
   - TransparentFX

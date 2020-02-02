@@ -10,9 +10,6 @@ AstroRepair/[Bb]uilds/
 AstroRepair/[Ll]ogs/
 AstroRepair/[Mm]emoryCaptures/
 
-AstroRepair/Assets/Scripts/*.meta
-AstroRepair/Assets/Scripts/*.cs.meta
-
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !AstroRepair/[Aa]ssets/**/*.meta
 

@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
 {
     public float force = 10.0f;
     public float timeBeforeDestroy = 10.0f;
+    public float timeStun = 5.0f;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
