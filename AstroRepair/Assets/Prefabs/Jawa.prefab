@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerToAvoid: {fileID: 0}
+  pieceShip: {fileID: 4747339487560883075, guid: f30df1c034ea6ef4ba21614f02705cff,
+    type: 3}
   leftDetector: {fileID: 3073231862844160992}
   rightDetector: {fileID: 3073231862765259702}
   upDetector: {fileID: 3073231863200897417}

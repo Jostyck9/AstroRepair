@@ -5,6 +5,7 @@ using UnityEngine;
 public class JawaManager : MonoBehaviour
 {
     public GameObject playerToAvoid;
+    public GameObject pieceShip;
 
     public GameObject leftDetector;
     public GameObject rightDetector;
@@ -25,6 +26,8 @@ public class JawaManager : MonoBehaviour
     private float speed;
     private float time;
     private Vector2 direction;
+
+    private bool dead = false;
 
     public enum Face : int
     {
@@ -250,5 +253,43 @@ public class JawaManager : MonoBehaviour
         animator.SetBool("isRunning", false);
         animator.SetBool("isMoving", false);
         rb.velocity = new Vector2(0, 0);
+    }
+
+    public void Die()
+    {
+        if (dead)
+            return;
+        dead = true;
+        SpawnPiece();
+        Destroy(gameObject);
+    }
+
+    public void SpawnPiece()
+    {
+        float offset = 0;
+        Vector2 positionSpawn = transform.position;
+        bool right = false;
+
+        switch (isFacing)
+        {
+            case Face.down:
+                positionSpawn.x -= offset;
+                break;
+            case Face.up:
+                positionSpawn.x += offset;
+                right = true;
+                break;
+            case Face.right:
+                positionSpawn.x -= offset;
+                break;
+            case Face.left:
+                positionSpawn.x += offset;
+                right = true;
+                break;
+            default:
+                break;
+        }
+        GameObject piece = Instantiate(pieceShip, new Vector3(positionSpawn.x, positionSpawn.y, transform.position.z), transform.rotation);
+        piece.GetComponent<PieceAnimation>().Jump(right);
     }
 }

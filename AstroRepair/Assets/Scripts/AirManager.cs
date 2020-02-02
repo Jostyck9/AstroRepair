@@ -40,12 +40,17 @@ public class AirManager : MonoBehaviour
         if (currentAir < 0)
             currentAir = 0;
         CheckDead();
-        /*Debug.Log(currentAir);*/
+        Debug.Log(currentAir);
     }
 
     private void CheckDead()
     {
         if (currentAir <= 0)
             playerController.Die();
+    }
+
+    public void SetAir(float air)
+    {
+        currentAir = air;
     }
 }

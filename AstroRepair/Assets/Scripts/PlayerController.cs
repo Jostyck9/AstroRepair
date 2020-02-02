@@ -225,4 +225,18 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(0, 0);
         timePause = time;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "ShipPiece")
+        {
+
+            if (collision.gameObject.GetComponent<PieceAnimation>().used == true)
+                return;
+            collision.gameObject.GetComponent<PieceAnimation>().used = true;
+            Destroy(collision.gameObject);
+            gameObject.GetComponent<ShipPiecePlayer>().currentOnPlayer += 1;
+            gameObject.GetComponent<ShipPiecePlayer>().nbrPieces += 1;
+        }
+    }
 }

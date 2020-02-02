@@ -28,8 +28,9 @@ public class JawaTriggerManager : MonoBehaviour
         }
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerController>().Pause(5);
-            Destroy(root);
+            collision.gameObject.GetComponent<PlayerController>().Pause(1.5f);
+            jm.Die();
+            /*Destroy(root);*/
         }
     }
 }
