@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShipPiecePlayer : MonoBehaviour
 {
+    public ScoreScript score;
+
     public uint maxPieces = 4;
     public uint nbrPieces = 0;
 
@@ -16,6 +18,7 @@ public class ShipPiecePlayer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        score.pieces = nbrPieces - currentOnPlayer;
     }
 }

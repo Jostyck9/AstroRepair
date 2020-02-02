@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
             isRunning = true;
         else
             isRunning = false;
+        animator.SetBool("isRunning", isRunning);
 
         if (!onPause)
         {
@@ -107,6 +108,7 @@ public class PlayerController : MonoBehaviour
             isMoving = false;
         else
             isMoving = true;
+        animator.SetBool("isMoving", isMoving);
         if (isRunning)
             rb.velocity = (movement * (speed * coefSprint) * Time.deltaTime);
         else

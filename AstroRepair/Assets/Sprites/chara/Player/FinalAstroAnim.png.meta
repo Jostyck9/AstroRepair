@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: bb8edef47905f6c4d8cc8062d2ca1d7f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2059109903272439825
+    second: FinalAstroAnim_0
+  - first:
+      213: 2492815389625603715
+    second: FinalAstroAnim_1
+  - first:
+      213: -7656476088641873725
+    second: FinalAstroAnim_2
+  - first:
+      213: 6321295817743626307
+    second: FinalAstroAnim_3
+  - first:
+      213: -9194985853053454040
+    second: FinalAstroAnim_4
+  - first:
+      213: 8080473777902693597
+    second: FinalAstroAnim_5
+  - first:
+      213: 4897241880459295319
+    second: FinalAstroAnim_6
+  - first:
+      213: -2291394101351472438
+    second: FinalAstroAnim_7
+  - first:
+      213: -7743923990050894970
+    second: FinalAstroAnim_8
+  - first:
+      213: -6939399359312281728
+    second: FinalAstroAnim_9
+  - first:
+      213: -5597399062268165227
+    second: FinalAstroAnim_10
+  - first:
+      213: -2030494154740773004
+    second: FinalAstroAnim_11
+  - first:
+      213: 1388710906133668323
+    second: FinalAstroAnim_12
+  - first:
+      213: -4088137538708867186
+    second: FinalAstroAnim_13
+  - first:
+      213: -3087812548132643829
+    second: FinalAstroAnim_14
+  - first:
+      213: 552891655167082129
+    second: FinalAstroAnim_15
+  - first:
+      213: -3837221599496278167
+    second: FinalAstroAnim_16
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FinalAstroAnim_0
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 3092
+        width: 471
+        height: 1321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef05fdd3729c63e0800000000000000
+      internalID: -2059109903272439825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_1
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 3092
+        width: 524
+        height: 1321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386d24da362489220800000000000000
+      internalID: 2492815389625603715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_2
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 3092
+        width: 501
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c89a39209bbeb590800000000000000
+      internalID: -7656476088641873725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_3
+      rect:
+        serializedVersion: 2
+        x: 4161
+        y: 3102
+        width: 381
+        height: 1302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34075c8fd01c9b750800000000000000
+      internalID: 6321295817743626307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_4
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 3791
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829b1027519d46080800000000000000
+      internalID: -9194985853053454040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_5
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1597
+        width: 726
+        height: 1306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcafbcb61c932070800000000000000
+      internalID: 8080473777902693597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_6
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 1623
+        width: 442
+        height: 1259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a31f72b8f76f340800000000000000
+      internalID: 4897241880459295319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_7
+      rect:
+        serializedVersion: 2
+        x: 2911
+        y: 2296
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2258484355330e0800000000000000
+      internalID: -2291394101351472438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_8
+      rect:
+        serializedVersion: 2
+        x: 2953
+        y: 1613
+        width: 381
+        height: 1296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b046df82e088490800000000000000
+      internalID: -7743923990050894970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_9
+      rect:
+        serializedVersion: 2
+        x: 4012
+        y: 1597
+        width: 726
+        height: 1306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f3e999c0d42bf90800000000000000
+      internalID: -6939399359312281728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_10
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 2272
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593c66b853b0252b0800000000000000
+      internalID: -5597399062268165227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_11
+      rect:
+        serializedVersion: 2
+        x: 3116
+        y: 1597
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f4b24035c32d3e0800000000000000
+      internalID: -2030494154740773004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_12
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 773
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1eecf1631b54310800000000000000
+      internalID: 1388710906133668323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_13
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 121
+        width: 442
+        height: 1262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87715481940447c0800000000000000
+      internalID: -4088137538708867186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_14
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 96
+        width: 471
+        height: 1302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c5f8fe8d2e525d0800000000000000
+      internalID: -3087812548132643829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_15
+      rect:
+        serializedVersion: 2
+        x: 2828
+        y: 101
+        width: 523
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ef281f7044ca700800000000000000
+      internalID: 552891655167082129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FinalAstroAnim_16
+      rect:
+        serializedVersion: 2
+        x: 4078
+        y: 101
+        width: 528
+        height: 1302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f619529437fbac0800000000000000
+      internalID: -3837221599496278167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
