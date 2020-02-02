@@ -41,18 +41,48 @@ public class MapGeneration : MonoBehaviour
                 this.GetComponent<Tilemap>().SetTile(new Vector3Int(x, y, 0), Roche4);
 
         }
-        for (int i = -1; i < maxX + 1; i++)
+        for (int i = -10; i < maxY + 10; i++)
         {
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 1, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 2, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 3, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 4, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 5, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 6, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 7, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 8, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 9, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 10, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 11, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 12, i, 0), BorderLeftright);
+        }
+        for (int i = -10; i < maxY + 10; i++)
+        {
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-12, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-11, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-10, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-9, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-8, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-7, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-6, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-5, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-4, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-3, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-2, i, 0), BorderLeftright);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-1, i, 0), BorderLeftright);
+        }
+        for (int i = -10; i < maxX + 10; i += 3)
+        {
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, maxY + 6, 0), BorderTopBot);
             this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, maxY + 3, 0), BorderTopBot);
-            this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, maxY + 2, 0), BorderTopBot);
             this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, maxY + 1, 0), BorderTopBot);
         }
-        for (int i = -1; i < maxX + 1; i++)
-            this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, -1, 0), BorderTopBot);
-        for (int i = -1; i < maxY + 1; i++)
-            this.GetComponent<Tilemap>().SetTile(new Vector3Int(maxX + 1, i, 0), BorderLeftright);
-        for (int i = -1; i < maxY + 1; i++)
-            this.GetComponent<Tilemap>().SetTile(new Vector3Int(-1, i, 0), BorderLeftright);
+        for (int i = -10; i < maxX + 10; i++)
+        {
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, -2, 0), BorderTopBot);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, -4, 0), BorderTopBot);
+            this.GetComponent<Tilemap>().SetTile(new Vector3Int(i, -7, 0), BorderTopBot);
+        }
         this.GetComponent<Tilemap>().RefreshAllTiles();
         
     }

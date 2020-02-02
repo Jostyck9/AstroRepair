@@ -18,7 +18,7 @@ public class FloorGeneration : MonoBehaviour
     {
         for (int i = -1; i < maxX + 1; i++)
         {
-            for (int j = -1; j < maxY + 3; j++)
+            for (int j = -1; j < maxY + 10; j++)
             {
                 int s = Random.Range(0, 20);
                 if (s == 1 || s == 2)
