@@ -380,6 +380,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1348063772, guid: c21663542a6cf5a40a79d58c47e7bcb6, type: 3}
+      propertyPath: maxAir
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348063772, guid: c21663542a6cf5a40a79d58c47e7bcb6, type: 3}
+      propertyPath: currentAir
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348063772, guid: c21663542a6cf5a40a79d58c47e7bcb6, type: 3}
+      propertyPath: airPerSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348063772, guid: c21663542a6cf5a40a79d58c47e7bcb6, type: 3}
+      propertyPath: airShoot
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2332891420109605476, guid: c21663542a6cf5a40a79d58c47e7bcb6,
         type: 3}
       propertyPath: m_Enabled
@@ -1407,12 +1423,12 @@ PrefabInstance:
     - target: {fileID: 3073231861974581292, guid: 1cabf8d583e765d48a46a9e6cf2c061f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 54.07
+      value: 59.3
       objectReference: {fileID: 0}
     - target: {fileID: 3073231861974581292, guid: 1cabf8d583e765d48a46a9e6cf2c061f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.93
+      value: 21.4
       objectReference: {fileID: 0}
     - target: {fileID: 3073231861974581292, guid: 1cabf8d583e765d48a46a9e6cf2c061f,
         type: 3}

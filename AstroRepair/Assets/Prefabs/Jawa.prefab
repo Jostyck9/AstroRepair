@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jm: {fileID: 3073231861974581295}
-  speed: 450
+  speed: 600
   speedRun: 1000
   timeRun: 4
   maxTimeWalk: 1.5

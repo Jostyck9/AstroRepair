@@ -24,6 +24,11 @@ public class MapGeneration : MonoBehaviour
         {
             int x = Random.Range(0, maxX);
             int y = Random.Range(0, maxY);
+            while (y <= (maxY / 2 + 5) && y >= (maxY / 2) - 5 && x <= (maxX / 2) + 5 && x >= (maxX / 2) - 5)
+            {
+                x = Random.Range(0, maxX);
+                y = Random.Range(0, maxY);
+            }
             int r = Random.Range(0, 9);
             if (r == 0 || r == 6)
                 this.GetComponent<Tilemap>().SetTile(new Vector3Int(x, y, 0), Arbre1);
