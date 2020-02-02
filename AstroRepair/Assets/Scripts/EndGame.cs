@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
@@ -24,11 +25,11 @@ public class EndGame : MonoBehaviour
         if (pieces.maxPieces == pieces.nbrPieces - pieces.currentOnPlayer)
         {
             Debug.Log("Won");
-            Application.Quit();
+            SceneManager.LoadScene("Victory", LoadSceneMode.Single);
         } else if (aManager.currentAir <= 0)
         {
             Debug.Log("Loose");
-            Application.Quit();
+            SceneManager.LoadScene("Defeat", LoadSceneMode.Single);
         }
     }
 }
