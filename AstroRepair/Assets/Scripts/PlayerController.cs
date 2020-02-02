@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     public bool isDead = false;
     public bool hasShoot = false;
     public bool isRunning = false;
+    public bool isMoving = false;
 
     private List<GameObject> spawnersList = new List<GameObject>();
 
@@ -84,6 +85,10 @@ public class PlayerController : MonoBehaviour
         if (isDead)
             return;
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        if (rb.velocity.x == 0 && rb.velocity.y == 0)
+            isMoving = false;
+        else
+            isMoving = true;
         if (isRunning)
             rb.velocity = (movement * (speed * coefSprint) * Time.deltaTime);
         else
