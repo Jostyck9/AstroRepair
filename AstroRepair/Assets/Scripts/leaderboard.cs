@@ -6,21 +6,15 @@ using UnityEngine.UI;
 using System.IO;
 
 
-public class Leaderboard : MonoBehaviour
+public class Leaderboard
 {
-    public Text textNames;
-    public Text textTimes;
-    public Text textPieces;
+/*    public Text textNames, textTimes, textPieces;
+*/
+    List<Player> interm = new List<Player>(), sorted;
 
-    List<Player> interm = new List<Player>();
-    List<Player> sorted;
+    string path, jsonString, names, times, pieces;
 
-    string path, jsonString;
-    string names = "";
-    string times = "";
-    string pieces = "";
-
-    void Start()
+    public void FillInListAndStrings()
     {
         path = Application.streamingAssetsPath + "/leaderboard.json";
         jsonString = File.ReadAllText(path);
@@ -38,12 +32,30 @@ public class Leaderboard : MonoBehaviour
         sorted.ForEach(player => {
             if (count <= 4)
             {
-                names += (player.name + "\n");
+                names += ((count + 1) + " " + player.name + "\n");
                 times += (player.time + "\n");
                 pieces += (player.pieces + "\n");
             }
             count++;
         });
+    }
+
+    public string getNames()
+    {
+        return (names);
+    }
+    public string getTimes()
+    {
+        return (times);
+    }
+    public string getPieces()
+    {
+        return (pieces);
+    }
+
+/*    void Start()
+    { 
+    
     }
     // Update is called once per frame
     void Update()
@@ -51,7 +63,7 @@ public class Leaderboard : MonoBehaviour
         textNames.text = names;
         textTimes.text = times;
         textPieces.text = pieces;
-    }
+    }*/
 }
 
 [System.Serializable]

@@ -526,7 +526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -80}
   m_SizeDelta: {x: 200, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590021150
@@ -538,12 +538,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1590021148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d2b21cb3c167a44f9bab6be5de468b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 94e0afbe021a2924599eeeef777b60db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textNames: {fileID: 1590021151}
-  textTimes: {fileID: 0}
-  textPieces: {fileID: 0}
 --- !u!114 &1590021151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
+  m_AnchoredPosition: {x: 140, y: -80}
   m_SizeDelta: {x: 200, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893353179
@@ -732,12 +730,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1893353177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d2b21cb3c167a44f9bab6be5de468b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 91d85f824e2b36949ba63745c874c38d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textNames: {fileID: 1590021151}
   textTimes: {fileID: 1893353180}
-  textPieces: {fileID: 0}
 --- !u!114 &1893353180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 0}
+  m_AnchoredPosition: {x: 250, y: -80}
   m_SizeDelta: {x: 200, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2007979497
@@ -927,11 +923,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2007979495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d2b21cb3c167a44f9bab6be5de468b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e7df53842dcc5144bd6e3642d4bf850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textNames: {fileID: 1590021151}
-  textTimes: {fileID: 2007979498}
   textPieces: {fileID: 2007979498}
 --- !u!114 &2007979498
 MonoBehaviour:
