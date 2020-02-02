@@ -25,13 +25,9 @@ public class ScoreScript : MonoBehaviour
         if (startTimeScore)
         {
             time += Time.deltaTime;
+            lastTime = time;
+            lastPieces = pieces;
         }
-    }
-
-    private void OnDestroy()
-    {
-        lastTime = time;
-        lastPieces = pieces;
     }
 
     public uint getLastPieces()

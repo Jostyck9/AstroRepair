@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class ScoreEndMenu : MonoBehaviour
 {
+    public ScoreScript scoreSave;
     public Text textScore;
-    string time, pieces, display;
+    string display;
     void Start()
     {
-        /*        time = getTime().toString();*/
-        /*        pieces = getPieces().soString();*/
-        display = "Final score:\n" + time + " seconds for a score of: " + pieces;
+        display = "Final score:\n" + (int)scoreSave.getLastTime() + " seconds with " + scoreSave.getLastPieces() + " pieces";
     }
 
     void Update()
