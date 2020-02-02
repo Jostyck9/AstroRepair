@@ -1142,8 +1142,8 @@ MonoBehaviour:
   Roche2: {fileID: 11400000, guid: 1c81d9215231dcc4f8e8292414cf46f0, type: 2}
   Roche3: {fileID: 11400000, guid: f964913416751b14690c64d7da1e5660, type: 2}
   Roche4: {fileID: 11400000, guid: e2abe2d8765d70c4b9f816e49266689f, type: 2}
-  BorderTopBot: {fileID: 11400000, guid: b416280127c7f7e48bf487245a102b7f, type: 2}
-  BorderLeftright: {fileID: 11400000, guid: 8d208c39cac0bc247a1be800c1d46895, type: 2}
+  BorderTopBot: {fileID: 11400000, guid: e65ace5850215854799c5108d829c62c, type: 2}
+  BorderLeftright: {fileID: 11400000, guid: 174928f4625703440aee897216990779, type: 2}
   maxX: 100
   maxY: 50
 --- !u!19719996 &1196107809
