@@ -10,10 +10,10 @@ public class PlayerController : MonoBehaviour
         right,
         up,
         down,
-        left_up,
+        /*left_up,
         left_down,
         right_up,
-        right_down
+        right_down*/
     }
 
     public GameObject leftSpawner;
@@ -25,8 +25,13 @@ public class PlayerController : MonoBehaviour
     public GameObject right_upSpawner;
     public GameObject right_downSpawner;
 
+    public Animator animator;
+
     private facing facingDirection;
     private facing lastFacingDirection;
+
+    public bool onPause = false;
+    private float timePause = 0;
 
     public float speed;
     public float coefSprint;
@@ -46,14 +51,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         lastFacingDirection = facingDirection;
+        animator.SetInteger("DirectionState", (int)facingDirection);
         spawnersList.Add(leftSpawner);
         spawnersList.Add(rightSpawner);
         spawnersList.Add(upSpawner);
         spawnersList.Add(downSpawner);
-        spawnersList.Add(left_upSpawner);
+        /*spawnersList.Add(left_upSpawner);
         spawnersList.Add(left_downSpawner);
         spawnersList.Add(right_upSpawner);
-        spawnersList.Add(right_downSpawner);
+        spawnersList.Add(right_downSpawner);*/
         currentWeapon = leftSpawner;
     }
 
@@ -68,15 +74,23 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        if (Input.GetAxis("Sprint") > 0)
+        if (!onPause && Input.GetAxis("Sprint") > 0)
             isRunning = true;
         else
             isRunning = false;
 
-        UpdateFacing(moveHorizontal, moveVertical);
-        UpdateWeapons();
-        CheckShoot();
-        Move(moveHorizontal, moveVertical);
+        if (!onPause)
+        {
+            UpdateFacing(moveHorizontal, moveVertical);
+            UpdateWeapons();
+            CheckShoot();
+            Move(moveHorizontal, moveVertical);
+        } else
+        {
+            timePause -= Time.deltaTime;
+            if (timePause < 0)
+                onPause = false;
+        }
     }
 
     private void Move(float moveHorizontal, float moveVertical)
@@ -115,7 +129,56 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead)
             return;
-        if (moveHorizontal > 0 && moveVertical == 0)
+
+        if (moveHorizontal > 0 && moveVertical >= 0)
+        {
+            if (moveHorizontal > moveVertical)
+                facingDirection = facing.right;
+            else
+                facingDirection = facing.up;
+        } else if (moveHorizontal > 0 && moveHorizontal < 0)
+        {
+            if (moveHorizontal > moveVertical * -1)
+                facingDirection = facing.right;
+            else
+                facingDirection = facing.down;
+        } else if (moveHorizontal < 0 && moveVertical >= 0)
+        {
+            if (moveHorizontal * -1 > moveVertical)
+                facingDirection = facing.left;
+            else
+                facingDirection = facing.up;
+        } else if (moveHorizontal < 0 && moveHorizontal < 0)
+        {
+            if (moveHorizontal < moveVertical)
+                facingDirection = facing.left;
+            else
+                facingDirection = facing.down;
+        } 
+        else if (moveHorizontal >= 0 && moveVertical > 0)
+        {
+            if (moveHorizontal < moveVertical)
+                facingDirection = facing.up;
+            else
+                facingDirection = facing.right;
+        }
+        else if (moveHorizontal < 0 && moveHorizontal > 0)
+        {
+            if (moveHorizontal * -1 > moveVertical)
+                facingDirection = facing.left;
+            else
+                facingDirection = facing.up;
+        }
+        else if (moveHorizontal >= 0 && moveVertical < 0)
+        {
+            if (moveHorizontal > moveVertical * -1)
+                facingDirection = facing.right;
+            else
+                facingDirection = facing.down;
+        }
+
+
+/*        if (moveHorizontal > 0 && moveVertical == 0)
             facingDirection = facing.right;
         else if (moveHorizontal < 0 && moveVertical == 0)
             facingDirection = facing.left;
@@ -123,14 +186,15 @@ public class PlayerController : MonoBehaviour
             facingDirection = facing.up;
         else if (moveHorizontal == 0 && moveVertical < 0)
             facingDirection = facing.down;
-        else if (moveHorizontal < 0 && moveVertical < 0)
+*/        /*else if (moveHorizontal < 0 && moveVertical < 0)
             facingDirection = facing.left_down;
         else if (moveHorizontal > 0 && moveVertical < 0)
             facingDirection = facing.right_down;
         else if (moveHorizontal < 0 && moveVertical > 0)
             facingDirection = facing.left_up;
         else if (moveHorizontal > 0 && moveVertical > 0)
-            facingDirection = facing.right_up;
+            facingDirection = facing.right_up;*/
+        animator.SetInteger("DirectionState", (int)facingDirection);
     }
 
     private void UpdateWeapons()
@@ -148,5 +212,12 @@ public class PlayerController : MonoBehaviour
     {
         isDead = true;
         rb.velocity = new Vector3(0, 0, 0);
+    }
+
+    public void Pause(float time)
+    {
+        onPause = true;
+        rb.velocity = new Vector2(0, 0);
+        timePause = time;
     }
 }

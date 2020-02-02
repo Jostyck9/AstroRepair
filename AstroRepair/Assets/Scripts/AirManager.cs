@@ -26,7 +26,7 @@ public class AirManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerController.isDead)
+        if (playerController.isDead || playerController.onPause)
             return;
         if (playerController.isRunning)
             currentAir -= airPerSecondsRun * Time.deltaTime;
@@ -40,7 +40,7 @@ public class AirManager : MonoBehaviour
         if (currentAir < 0)
             currentAir = 0;
         CheckDead();
-        Debug.Log(currentAir);
+        /*Debug.Log(currentAir);*/
     }
 
     private void CheckDead()
