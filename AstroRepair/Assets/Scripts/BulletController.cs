@@ -8,6 +8,8 @@ public class BulletController : MonoBehaviour
     public float timeBeforeDestroy = 10.0f;
     public float timeStun = 5.0f;
     private Rigidbody2D rb;
+    public AudioClip sound;
+    public AudioSource effectSource;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +34,19 @@ public class BulletController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Decor")
+        {
+            effectSource.PlayOneShot(sound);
             Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Decor")
+        {
+            effectSource.PlayOneShot(sound);
             Destroy(gameObject);
+        }
     }
+
 }

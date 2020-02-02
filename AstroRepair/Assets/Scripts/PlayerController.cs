@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
     public GameObject right_upSpawner;
     public GameObject right_downSpawner;
 
+    public AudioClip fire;
+    public AudioClip pickPiece;
+    public AudioSource effectSource;
+
     public Animator animator;
 
     private facing facingDirection;
@@ -125,6 +129,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead)
             return;
+        effectSource.PlayOneShot(fire);
         currentWeapon.GetComponent<Shooter>().shoot();
         hasShoot = true;
     }
@@ -233,6 +238,7 @@ public class PlayerController : MonoBehaviour
 
             if (collision.gameObject.GetComponent<PieceAnimation>().used == true)
                 return;
+            effectSource.PlayOneShot(pickPiece);
             collision.gameObject.GetComponent<PieceAnimation>().used = true;
             Destroy(collision.gameObject);
             gameObject.GetComponent<ShipPiecePlayer>().currentOnPlayer += 1;

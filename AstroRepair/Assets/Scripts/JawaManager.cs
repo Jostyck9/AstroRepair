@@ -14,6 +14,10 @@ public class JawaManager : MonoBehaviour
     public Animator animator;
     public GameObject stunAnimation;
 
+    public AudioClip alerte;
+    public AudioClip stun;
+    public AudioSource effectSource;
+
     public bool isStun = false;
     private float timeRemainingStun = 0;
     public float amplitude = 1;
@@ -240,6 +244,7 @@ public class JawaManager : MonoBehaviour
     {
         if (isStun)
             return;
+        effectSource.PlayOneShot(alerte);
         isRunning = true;
         animator.SetBool("isRunning", true);
         Move(direction, speed, time);
@@ -247,6 +252,7 @@ public class JawaManager : MonoBehaviour
 
     public void Stun(float seconds)
     {
+        effectSource.PlayOneShot(stun);
         stunAnimation.SetActive(true);
         timeRemainingStun = seconds;
         isStun = true;

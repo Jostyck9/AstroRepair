@@ -7,6 +7,10 @@ public class ShipManager : MonoBehaviour
     public SpriteRenderer renderer;
     public List<Sprite> nextSteps;
 
+    public AudioClip putPiece;
+    public AudioClip upAir;
+    public AudioSource effectSource;
+
     public bool isComplete = false;
     private int index = 0;
 
@@ -33,6 +37,7 @@ public class ShipManager : MonoBehaviour
                 Debug.Log(nbr);
                 for (uint i = 0; i < nbr; i++)
                 {
+                    effectSource.PlayOneShot(putPiece);
                     renderer.sprite = nextSteps[index];
                     index++;
                 }
@@ -48,6 +53,7 @@ public class ShipManager : MonoBehaviour
 
     private void RefreshAir(GameObject player)
     {
+        effectSource.PlayOneShot(upAir);
         player.GetComponent<AirManager>().SetAir(player.GetComponent<AirManager>().maxAir);
     }
 }
