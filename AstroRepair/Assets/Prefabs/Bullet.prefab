@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3397130028800025989}
   - component: {fileID: 3397130028800025988}
-  - component: {fileID: 3397130028800025987}
   - component: {fileID: 3397130028800025991}
   - component: {fileID: 3397130028800025990}
   - component: {fileID: 3397130028800025992}
+  - component: {fileID: 6460152964822695438}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -86,25 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3397130028800025987
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3397130028800025986}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e427088b8a7a4a246a018cfaab5291ca, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &3397130028800025991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 500
   timeBeforeDestroy: 5
+  timeStun: 5
 --- !u!50 &3397130028800025992
 Rigidbody2D:
   serializedVersion: 4
@@ -166,3 +148,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &6460152964822695438
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397130028800025986}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 38ffe1e9bac8ead48860976c1955f10e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

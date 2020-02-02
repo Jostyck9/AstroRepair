@@ -11,6 +11,7 @@ public class JawaManager : MonoBehaviour
     public GameObject upDetector;
     public GameObject downDetector;
     public Animator animator;
+    public GameObject stunAnimation;
 
     public bool isStun = false;
     private float timeRemainingStun = 0;
@@ -75,6 +76,7 @@ public class JawaManager : MonoBehaviour
         } else
         {
             isStun = false;
+            stunAnimation.SetActive(false);
         }
     }
 
@@ -89,6 +91,7 @@ public class JawaManager : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 0);
             isMoving = false;
+            animator.SetBool("isMoving", false);
         }
     }
 
@@ -120,6 +123,8 @@ public class JawaManager : MonoBehaviour
         {
             /*currentAmplitudeSpeed = 0;*/
             rb.velocity = new Vector2(0, 0);
+            animator.SetBool("isMoving", false);
+            animator.SetBool("isRunning", false);
             isMoving = false;
             isRunning = false;
         }
@@ -219,6 +224,7 @@ public class JawaManager : MonoBehaviour
         if (isStun)
             return;
         isMoving = true;
+        animator.SetBool("isMoving", true);
         this.speed = speed;
         this.time = time;
         this.direction = direction;
@@ -232,13 +238,17 @@ public class JawaManager : MonoBehaviour
         if (isStun)
             return;
         isRunning = true;
+        animator.SetBool("isRunning", true);
         Move(direction, speed, time);
     }
 
     public void Stun(float seconds)
     {
+        stunAnimation.SetActive(true);
         timeRemainingStun = seconds;
         isStun = true;
+        animator.SetBool("isRunning", false);
+        animator.SetBool("isMoving", false);
         rb.velocity = new Vector2(0, 0);
     }
 }
